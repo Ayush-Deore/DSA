@@ -1,0 +1,18 @@
+#
+# @lc app=leetcode id=70 lang=python3
+#
+# [70] Climbing Stairs
+#
+
+# @lc code=start
+class Solution:
+    def climbStairs(self, n):
+        prev = 1
+        prev2 = 0
+        for i in range(1, n+1):
+            curi = prev + prev2
+            prev2 = prev
+            prev = curi
+        return prev 
+# @lc code=end
+
